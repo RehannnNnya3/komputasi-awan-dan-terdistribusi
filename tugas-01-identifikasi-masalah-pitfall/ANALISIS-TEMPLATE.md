@@ -12,11 +12,13 @@
 
 **Bukti di skenario:** Tim menemukan bahwa kode mereka menulis asumsi seperti # network is always reliable, no need for retry dan tidak ada timeout sama sekali pada pemanggilan antar service (modul pesananan pembayaran dan menunggu tanpa batas waktu ).
 
-**Kenapa ini keliru:** Dalam sistem terdistribusi nyata,jaringan komputer tidak pernah 100% andal.Data di kirim melewati kabel,router dan internet publik (atau jaringan cloud internal). Selalu ada risiko paket data hilang (packet loss), gangguan koneksi fisik,atau server tujuan (seperti sistem pembayaran pihak ketiga) mendadak down atau kelebihan beban (overloaded)
+**Kenapa ini keliru:** Dalam sistem terdistribusi nyata,jaringan komputer tidak pernah 100% andal.Data di kirim melewati kabel,router dan internet publik (atau jaringan cloud internal). Selalu ada risiko paket data hilang (packet loss), gangguan koneksi fisik,atau server tujuan (seperti sistem pembayaran pihak ketiga) mendadak down atau kelebihan beban seperti overload 
 
-**Dampak ke FoodGo:** Ketika Traffic melonjak saat jam makan siang,pembayaran melambat akibat jaringan yang padat.karena modul pesananan tidak memiliki batasan waktu,modul pesanana akan mengggantung dan menunggu jawaban selamanya.hal ini menahan thread dan memori server utama.Karena antrean pesanan baru terus masuk,server kehabisan sumber daya komputasi hingga akhir nya backend crash total
+**Dampak ke FoodGo:** ketika jam makan siang traffic melonjak naik akibat pembayaran melambat dan jaringan yang padat.karena modul pesanan tidak memiliki  batasan waktu,
+modul akan menggantung dan menungggu jawaban selamanya hal ini,menahan thread dan memori server utama karena lonjakan trafic lonjakan pas jam makan siang terus masuk ke server.akibat nya server kehabisan sumber daya dan akhir nya backend crash total
 
-**Solusi desain awal:** menerapkan batas waktu tunggu maksimal pada setiap pemanggilan jaringan.selain itu,buat kebijakan percobaan kembali otomatis menggunkan metode exponential Backoff debgan jitter.artinya,jika koneksi gagal atau lambat,sistem akan mencoba lagi dengan memberikan jeda waktu tunggu yang semakin lama dan acak,agar tidak membebani jaringan
+**Solusi desain awal:** mungkin saya bakalan memakai batas waktu tunggu maksimal pada setiap pemanggilan jaringan.seperti menggunkan metode exponential Backoff dengan jitter
+agar koneksi gagal atau lambat,sistem akan mencoba lagi dengan memberikan jeda waktu tunggu yang semakin lama dan acak,agar tidak membebani jaringan dan nge buat backend crash total
 
 **Trade-off:* solusi retry tidak lah gratis.jika modul pembayaran eksternal memang sedang mati total,melakukan retry terus-menerus dari ribuan pesananan yang masuk justru akan menciptakan badai permintaan baru (retry storm)> Hal ini akan memperparah beban jaringan dan memastikan server tujuan semakin sulit untuk pulih (cascadin failure)
 ---
