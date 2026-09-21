@@ -2,9 +2,9 @@
 
 > Isi jurnal ini selama proses diskusi berlangsung, bukan ditulis ulang rapi di akhir. Tulis dengan gaya bebas — poin diskusi, kebuntuan, perubahan pikiran.
 
-## 19/09/2026
-- Peserta: Artha,Rehan
-- Poin diskusi: ...
+## 21/09/2026
+- Peserta: Artha, Rayhan
+- Poin diskusi: Menganalisis Pitfall di studi kasus
 - Perbedaan pendapat (jika ada): ...
 
 ## [Tanggal diskusi 2]
