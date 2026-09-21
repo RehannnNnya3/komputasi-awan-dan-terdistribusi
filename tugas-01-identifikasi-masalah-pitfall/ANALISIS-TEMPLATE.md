@@ -20,7 +20,7 @@ modul akan menggantung dan menungggu jawaban selamanya hal ini,menahan thread da
 **Solusi desain awal:** mungkin saya bakalan memakai batas waktu tunggu maksimal pada setiap pemanggilan jaringan.seperti menggunkan metode exponential Backoff dengan jitter
 agar koneksi gagal atau lambat,sistem akan mencoba lagi dengan memberikan jeda waktu tunggu yang semakin lama dan acak,agar tidak membebani jaringan dan nge buat backend crash total
 
-**Trade-off:* risiko nya aplikasi foodgo bakalan kena retry storm.jika server di foodgo sedang mati total ribuan pengguna foodgo otomati melakukan percobaan ulang secara bersamaan dan justru akan membombardir jaringan dengan puluhan ribu permintaan baru. Solusi ini berbalik menjadi "senjata makan tuan" yang membuat jaringan semakin macet parah dan server tujuan semakin mustahil untuk pulih
+**Trade-off:* risiko nya aplikasi foodgo bakalan kena retry storm.jika server di foodgo sedang mati total ribuan pengguna foodgo otomatis melakukan percobaan ulang secara bersamaan dan justru akan membombardir jaringan dengan puluhan ribu permintaan baru. Solusi ini berbalik menjadi "senjata makan tuan" yang membuat jaringan semakin macet parah dan server tujuan semakin mustahil untuk pulih
 ---
 
 ## Pitfall 2: [nama pitfall] — ditulis oleh [nama]
