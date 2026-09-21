@@ -4,8 +4,8 @@
 
 | Nama | NIM | Kontribusi |
 |---|---|---|
-| [nama 1] | [nim] | [pitfall/bagian yang dikerjakan] |
-| [nama 2] | [nim] | [pitfall/bagian yang dikerjakan] |
+| Mohammad Rayhan Pakaya | 103072400037 | [pitfall/bagian yang dikerjakan] |
+| Putra Paramartha Suratinoyo | 103072400022 | [pitfall/bagian yang dikerjakan] |
 | [nama 3] | [nim] | [pitfall/bagian yang dikerjakan] |
 
 ## Pitfall 1: [nama pitfall] — ditulis oleh [nama]
