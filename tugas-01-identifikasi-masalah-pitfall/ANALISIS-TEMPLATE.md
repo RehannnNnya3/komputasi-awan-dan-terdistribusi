@@ -23,11 +23,18 @@ agar koneksi gagal atau lambat,sistem akan mencoba lagi dengan memberikan jeda w
 **Trade-off:* risiko nya aplikasi foodgo bakalan kena retry storm.jika server di foodgo sedang mati total ribuan pengguna foodgo otomatis melakukan percobaan ulang secara bersamaan dan justru akan membombardir jaringan dengan puluhan ribu permintaan baru. Solusi ini berbalik menjadi "senjata makan tuan" yang membuat jaringan semakin macet parah dan server tujuan semakin mustahil untuk pulih
 ---
 
-## Pitfall 2: [nama pitfall] — ditulis oleh [nama]
+## Pitfall 2: [Monolithic Single Point of Failure] — ditulis oleh [Rayhan]
 
-(ulangi struktur di atas)
+**Bukti di skenario:** satu server yang menangani semua modul (pesanan, pembayaran, notifikasi kurir) kewalahan karena semuanya berjalan di satu proses monolitik yang sama.
 
----
+**Kenapa ini keliru:** Dikarenakan semua modul harus berbagi CPU, RAM, thread pool, dan network I/O. Saat Traffic tinggi, ada modul yang tidak kebagian sumber daya.
+
+**Dampak ke FoodGo:** hal ini menyebabkan jika ada 1 saja modul yang terjadi crash, maka seluruh aplikasi foodgo akan terjadi crash 
+
+**Solusi desain awal:** Menambah server untuk membuat Server Cluster agar aplikasi terhindar dari 
+downtime dan kehilangan data saat server mengalami crash saat High Traffic
+
+**Trade-off:** Biaya untuk Menambah Server 
 
 ## Pitfall 3: [nama pitfall] — ditulis oleh [nama]
 
