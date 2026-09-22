@@ -50,4 +50,4 @@ downtime dan kehilangan data saat server mengalami crash saat High Traffic
 
 ## Kesimpulan Kelompok
 
-[Ringkasan: jika FoodGo memperbaiki ketiga pitfall ini, apa arsitektur yang disarankan secara garis besar? Kaitkan dengan Tugas 2.]
+[Ringkasan: Arsitektur Event-Driven Microservices disarankan untuk jangka panjang. Saat high traffic, lonjakan ribuan transaksi yang masuk secara bersamaan bisa membuat database mendadak kolaps. Message Broker bertindak sebagai penyangga (buffer) yang menampung semua transaksi masuk dan membaginya ke worker microservices sesuai dengan kapasitas maksimal yang bisa ditangani oleh database secara stabil.]
