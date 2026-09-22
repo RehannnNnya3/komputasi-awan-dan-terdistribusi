@@ -4,8 +4,8 @@
 
 | Nama | NIM | Kontribusi |
 |---|---|---|
-| Mohammad Rayhan Pakaya | 103072400037 | [pitfall/bagian yang dikerjakan] |
-| Putra Paramartha Suratinoyo | 103072400022 | [pitfall/Network is reliable] |
+| Mohammad Rayhan Pakaya | 103072400037 | [pitfall/Lack of Self-Healing, Monolithic Single Point of Failure] |
+| Putra Paramartha Suratinoyo | 103072400022 | [pitfall/Network is reliable, Lack of Self-Healing] |
 | [nama 3] | [nim] | [pitfall/bagian yang dikerjakan] |
 
 ## Pitfall 1: [The Network is Reliable — ditulis oleh [Putra P Suratinoyo]
@@ -36,11 +36,17 @@ downtime dan kehilangan data saat server mengalami crash saat High Traffic
 
 **Trade-off:** Biaya untuk Menambah Server 
 
-## Pitfall 3: [nama pitfall] — ditulis oleh [nama]
+## Pitfall 3: [Lack of Self-Healing] — ditulis oleh [Artha, Rayhan]
 
-(ulangi struktur di atas)
+**Bukti di skenario:** Server backend kadang crash total dan perlu di-restart manual.
 
----
+**Kenapa ini keliru:** Server setelah terjadi crash, seharusnya bisa melakukan self-recovery. Sehingga Tim tidak perlu restart manual setiap saat jika server terjadi crash
+
+**Dampak ke FoodGo:** foodgo mengalami kerugian rill per detik karena server sedang mati pada waktu puncak/high traffic
+
+**Solusi desain awal:** Dibuatnya sistem Self-recovery untuk meminimalisir downtime yang bisa memakan waktu yang lama. ini membuat foodgo tidak kehilangan timing saat high traffic
+
+**Trade-off:** Karena sistem bisa sembuh sendiri secara otomatis saat terjadi kegagalan, Tim akan menganggap indikator masalah ini "nornmal".
 
 ## Kesimpulan Kelompok
 
