@@ -7,7 +7,7 @@
 - Poin diskusi: Menganalisis Pitfall di studi kasus
 - Perbedaan pendapat (jika ada): ...
 
-## [Tanggal diskusi 2]
+## 22/09/2026
 - Peserta: Artha, Rayhan
 - Poin diskusi: Memperbaiki hasil analisis Pitfall yang sudah ada
 - Perbedaan pendapat (jika ada): ...
