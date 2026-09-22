@@ -5,7 +5,7 @@
 | Nama | NIM | Kontribusi |
 |---|---|---|
 | Mohammad Rayhan Pakaya | 103072400037 | [pitfall/bagian yang dikerjakan] |
-| Putra Paramartha Suratinoyo | 103072400022 | [pitfall/bagian yang dikerjakan] |
+| Putra Paramartha Suratinoyo | 103072400022 | [pitfall/Network is reliable] |
 | [nama 3] | [nim] | [pitfall/bagian yang dikerjakan] |
 
 ## Pitfall 1: [The Network is Reliable — ditulis oleh [Putra P Suratinoyo]
