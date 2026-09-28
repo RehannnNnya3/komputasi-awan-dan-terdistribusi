@@ -1,5 +1,10 @@
 # Jurnal Proses — Tugas 2
 
+  | Nama | NIM | Kontribusi |
+  |---|---|---|
+  | Moh Rayhan Pakaya | 103072400037 | Mengisi Jurnal AI dan menganalisis arsitektur yang cocok |
+  | Putra Paramartha S | 103072400022 | ... |
+
 ## [Tanggal] 28
 - Opsi arsitektur yang dipertimbangkan: Kombinasi SOA dan Public-subsribe 
 - Kenapa akhirnya pilih SOA/Pub-Sub: Karena kelebihannya diantaranya SOA untuk Pemisahan Jalur Kritis dan Non-Kritis, Pub-sub untuk menghindari matinya salah satu modul tidak akan menyebabkan timeout
