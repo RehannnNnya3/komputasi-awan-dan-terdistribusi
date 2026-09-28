@@ -1,0 +1,36 @@
+graph TD
+    %% Clients
+    Client[Pelanggan / Mobile App]
+    RestoApp[Aplikasi Resto]
+    DriverApp[Aplikasi Kurir]
+
+    %% Infrastructure
+    Gateway[API Gateway]
+    Broker[Message Broker\nRabbitMQ / Kafka]
+
+    %% Core Services
+    OrderSvc[Service Pesanan\nOrder Service]
+    PaySvc[Service Pembayaran\nPayment Service]
+    CatalogSvc[Service Katalog Resto\nCatalog Service]
+    NotifSvc[Service Notifikasi\nNotification Service]
+    CourierSvc[Service Kurir\nCourier Service]
+
+    %% Synchronous Request-Response Flow
+    Client -->|1. HTTP REST\nLihat menu| Gateway
+    Gateway -->|1a. Request/Response| CatalogSvc
+
+    Client -->|2. HTTP REST\nBuat Pesanan| Gateway
+    Gateway -->|2a. Request/Response| OrderSvc
+
+    OrderSvc -->|3. REST / gRPC Sinkron\nProses Bayar| PaySvc
+    PaySvc -- Output Status --> OrderSvc
+
+    %% Asynchronous Event-Driven Flow (Pub-Sub)
+    OrderSvc -->|4. Publish Event\n'OrderPaid'| Broker
+
+    Broker -->|5a. Subscribe Event| NotifSvc
+    Broker -->|5b. Subscribe Event| CourierSvc
+    Broker -->|5c. Subscribe Event| RestoApp
+
+    NotifSvc -->|6a. Push Notification| Client
+    CourierSvc -->|6b. Penugasan Driver| DriverApp
