@@ -3,7 +3,7 @@
   | Nama | NIM | Kontribusi |
   |---|---|---|
   | Moh Rayhan Pakaya | 103072400037 | Mengisi Jurnal AI dan menganalisis arsitektur yang cocok |
-  | Putra Paramartha S | 103072400022 | ... |
+  | Putra Paramartha S | 103072400022 | membuat flow diagram dan  |
 
 ## [Tanggal] 28
 - Opsi arsitektur yang dipertimbangkan: Kombinasi SOA dan Public-subsribe 
