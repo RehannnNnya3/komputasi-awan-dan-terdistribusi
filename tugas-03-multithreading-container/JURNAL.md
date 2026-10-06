@@ -16,4 +16,4 @@
 
 | Tanggal | Tool AI | Prompt yang diberikan | Ringkasan saran/ide AI | Bagaimana diolah jadi tulisan/kode sendiri |
 |---|---|---|---|---|
-| ... | ... | ... | ... | ... |
+| 7 OKTOBER | Gemini | "Mengapa hasil counter pada simulasi multithreading Python bisa kurang dari nilai yang seharusnya?" | Menjelaskan konsep race condition, ketiadaan sifat atomic pada increment, dan cara kerja threading.Lock | Dikarenakan adanya beberapa thread yang mau mengubah beberapa variabel secara bersamaan. seperti Operasi Increment Bukan Operasi Atomis, Pengalihan Konteks, dll |
