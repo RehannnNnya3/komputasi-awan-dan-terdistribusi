@@ -1,7 +1,7 @@
 # Jurnal Proses — Tugas 4
 
 ## Jalur yang dipilih
-- [RPC / MQ / keduanya], alasan: RPC, karena hanya seperti memanggil local func biasa. Untuk Setup nya pun tidak sulit. tidak perlu menjalankan docker, install broker, dll
+- RPC, alasan: RPC, karena hanya seperti memanggil local func biasa. Untuk Setup nya pun tidak sulit. tidak perlu menjalankan docker, install broker, dll
 
 ## Kendala teknis
 - Error saat setup (mis. koneksi RabbitMQ ditolak, port bentrok): ...
