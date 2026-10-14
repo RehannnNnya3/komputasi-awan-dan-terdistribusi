@@ -8,7 +8,7 @@
 
 Solusi : Pastikan server.pysudah jalan duluan sebelum client.pydijalankan.
 
-Error Port Sudah Digunakan : Server gagal jalan karena port 8000 lagi dipakai aplikasi lain.
+- Error Port Sudah Digunakan : Server gagal jalan karena port 8000 lagi dipakai aplikasi lain.
 
 Solusi : Ganti port di server.pydan client.pyke port lain (misal: 8001), atau matikan aplikasi yang pakai port 8000.
 
